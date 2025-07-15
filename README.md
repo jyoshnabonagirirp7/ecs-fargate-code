@@ -12,9 +12,13 @@ This repository demonstrates a complete CI/CD pipeline using **AWS CodePipeline*
 ## Folder Structure
 
 ├── app/ # Sample web application code (e.g., index.html)
+
 ├── Dockerfile # Docker build file for app
+
 ├── buildspec.yml # CodeBuild instructions
+
 ├── taskdef.json # ECS Task Definition
+
 ├── appspec.yaml # CodeDeploy AppSpec for ECS blue/green
 
 
