@@ -1,9 +1,12 @@
 {
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:590157784153:task-definition/bluegreen-taskdef:3",
+  "family": "bluegreen-taskdef",
+  "networkMode": "awsvpc",
+  "executionRoleArn": "arn:aws:iam::590157784153:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::590157784153:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "name": "ecs-container",
-      "image": "<ImageURI>"
+      "image": "<IMAGE_URI>",
       "cpu": 1024,
       "memory": 3072,
       "portMappings": [
@@ -16,63 +19,15 @@
         }
       ],
       "essential": true,
-      "environment": [],
-      "environmentFiles": [],
-      "mountPoints": [],
-      "volumesFrom": [],
-      "ulimits": [],
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
           "awslogs-group": "/ecs/bluegreen-taskdef",
           "awslogs-region": "us-east-1",
           "awslogs-stream-prefix": "ecs"
-        },
-        "secretOptions": []
-      },
-      "systemControls": []
+        }
+      }
     }
-  ],
-  "family": "bluegreen-taskdef",
-  "taskRoleArn": "arn:aws:iam::590157784153:role/ecsTaskExecutionRole",
-  "executionRoleArn": "arn:aws:iam::590157784153:role/ecsTaskExecutionRole",
-  "networkMode": "awsvpc",
-  "revision": 3,
-  "volumes": [],
-  "status": "ACTIVE",
-  "requiresAttributes": [
-    {
-      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-    },
-    {
-      "name": "ecs.capability.execution-role-awslogs"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.ecr-auth"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.task-iam-role"
-    },
-    {
-      "name": "ecs.capability.execution-role-ecr-pull"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-    },
-    {
-      "name": "ecs.capability.task-eni"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
-    }
-  ],
-  "placementConstraints": [],
-  "compatibilities": [
-    "EC2",
-    "FARGATE"
   ],
   "requiresCompatibilities": [
     "FARGATE"
@@ -82,9 +37,5 @@
   "runtimePlatform": {
     "cpuArchitecture": "X86_64",
     "operatingSystemFamily": "LINUX"
-  },
-  "registeredAt": "2025-07-15T00:17:46.883Z",
-  "registeredBy": "arn:aws:iam::590157784153:user/jyoshnaiam",
-  "enableFaultInjection": false,
-  "tags": []
+  }
 }
