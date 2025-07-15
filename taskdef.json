@@ -6,7 +6,7 @@
   "containerDefinitions": [
     {
       "name": "ecs-container",
-      "image": "<IMAGE_URI>",
+      "image": "<ImageURI>",
       "cpu": 1024,
       "memory": 3072,
       "portMappings": [
