@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    AWS_REGION: us-east-1 
+    AWS_REGION: us-east-2
     AWS_ACCOUNT_ID: 590157784153
     IMAGE_NAME: bluegreen
     
