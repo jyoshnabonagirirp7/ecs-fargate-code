@@ -1,4 +1,3 @@
-
 FROM public.ecr.aws/bitnami/node:latest
 
 # Create app directory
