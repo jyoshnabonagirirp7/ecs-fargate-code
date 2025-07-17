@@ -1,6 +1,5 @@
 
-#FROM public.ecr.aws/bitnami/node:latest
-FROM 590157784153.dkr.ecr.us-east-1.amazonaws.com/bluegreen:latest
+FROM public.ecr.aws/bitnami/node:latest
 
 # Create app directory
 WORKDIR /usr/src/app
