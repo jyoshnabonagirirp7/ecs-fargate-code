@@ -1,4 +1,4 @@
-FROM public.ecr.aws/bitnami/node:latest
+FROM node:18-alpine 
 
 # Create app directory
 WORKDIR /usr/src/app
