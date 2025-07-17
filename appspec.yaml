@@ -5,5 +5,5 @@ Resources:
      Properties:
        TaskDefinition: "arn:aws:ecs:us-east-2:590157784153:task-definition/bluegreentaskdef:1"
        LoadBalancerInfo:
-         ContainerName: "ecs-container"
+         ContainerName: "bluegreen"
          ContainerPort: 8080
